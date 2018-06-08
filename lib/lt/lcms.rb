@@ -2,7 +2,6 @@
 
 require 'lt/google/api'
 require 'lt/lcms/version'
-
 require 'lt/lcms/lesson/downloader'
 
 module Lt

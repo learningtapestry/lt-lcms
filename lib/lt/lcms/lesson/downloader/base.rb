@@ -37,7 +37,7 @@ module Lt
                 raw_content
               end
             self
-          rescue Google::Apis::RateLimitError
+          rescue ::Google::Apis::RateLimitError
             raise unless options[:import_retry]
             raise if retry_attempt >= MAX_RETRY_COUNT
 
