@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'google-api-client'
   spec.add_dependency 'httparty'
-  spec.add_dependency 'rubyzip', '~> 1.2.1'
+  spec.add_dependency 'rubyzip', '~> 1.2.2'
 
   spec.add_development_dependency 'brakeman'
   spec.add_development_dependency 'bundler', '~> 1.16'
