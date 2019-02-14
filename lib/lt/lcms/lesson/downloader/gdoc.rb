@@ -16,7 +16,7 @@ module Lt
           end
 
           def download
-            super { |html| handle_google_drawings html }
+            super(&method(:handle_google_drawings))
           end
 
           private
