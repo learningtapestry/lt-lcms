@@ -8,4 +8,4 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gemspec
 
 gem 'lt-google-api', git: 'https://github.com/learningtapestry/lt-google-api',
-                     branch: 'refactoring', ref: 'ba86cdaa'
+                     branch: 'refactoring', ref: 'e9a34c37'
