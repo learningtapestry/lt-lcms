@@ -8,17 +8,17 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.name          = 'lt-lcms'
   spec.version       = Lt::Lcms::VERSION
   spec.authors       = ['Alexander Kuznetsov']
-  spec.email         = ['alexander@learningtapeestry.com']
+  spec.email         = %w(alexander@learningtapeestry.com paranoic.san@gmail.com)
 
-  spec.homepage    = '' # TODO: Place URL to GitHub page here
-  spec.summary     = '' # TODO: Summary of OdellLessonCompiler.
-  spec.description = '' # TODO: Description of OdellLessonCompiler.
-  spec.license     = 'Apache-2.0' # TODO: Update the license.
+  spec.homepage    = 'https://github.com/learningtapestry/lt-lcms'
+  spec.summary     = 'Contains set of classes to work with Google Docs based lesson objects'
+  spec.description = ''
+  spec.license     = 'Apache-2.0'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
   else
     raise 'RubyGems 2.0 or newer is required to protect against ' \
       'public gem pushes.'
@@ -33,6 +33,7 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
 
   spec.add_dependency 'google-api-client'
   spec.add_dependency 'httparty'
+  spec.add_dependency 'lt-google-api', '~> 0.1'
   spec.add_dependency 'rubyzip', '~> 1.2.2'
 
   spec.add_development_dependency 'brakeman'

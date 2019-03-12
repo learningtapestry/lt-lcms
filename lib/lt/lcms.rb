@@ -6,6 +6,5 @@ require 'lt/lcms/lesson/downloader'
 
 module Lt
   module Lcms
-    # Your code goes here...
   end
 end
