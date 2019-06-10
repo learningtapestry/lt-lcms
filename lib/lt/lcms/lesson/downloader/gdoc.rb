@@ -26,10 +26,14 @@ module Lt
           def handle_google_drawings(html)
             return html unless (match = html.scan(GOOGLE_DRAWING_RE))
 
-            headers = { 'Authorization' => "Bearer #{@credentials.access_token}" }
+            bearer = @credentials.fetch_access_token!['access_token']
+            headers = { 'Authorization' => "Bearer #{bearer}" }
 
             match.to_a.uniq.each do |url|
               response = HTTParty.get CGI.unescapeHTML(url), headers: headers
+
+              next unless response.code == 200
+
               new_src = "data:#{response.content_type};base64, #{Base64.encode64(response)}\" drawing_url=\"#{url}"
               html = html.gsub(url, new_src)
             end
