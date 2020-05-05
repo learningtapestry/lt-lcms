@@ -31,13 +31,12 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'google-api-client'
-  spec.add_dependency 'httparty'
+  spec.add_dependency 'google-api-client', '~> 0.38'
+  spec.add_dependency 'httparty', '~> 0.18'
   spec.add_dependency 'lt-google-api', '~> 0.1'
-  spec.add_dependency 'rubyzip', '>= 1.3.0'
+  spec.add_dependency 'rubyzip', '~> 2'
 
   spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'bundler-audit'
   spec.add_development_dependency 'overcommit', '~> 0.49.1'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rubocop', '~> 0.59.2'
