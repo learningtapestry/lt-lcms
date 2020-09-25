@@ -8,6 +8,7 @@ module Lt
       module Downloader
         class Gdoc < Base
           GOOGLE_DRAWING_RE = %r{https?://docs\.google\.com/?[^"]*/drawings/[^"]*}i
+          GOOGLE_URL_RE = %r{https://www\.google\.com/url\?q=([^&]*)&?.*}i
           MIME_TYPE = 'application/vnd.google-apps.document'
           MIME_TYPE_EXPORT = 'text/html'
 
@@ -16,7 +17,9 @@ module Lt
           end
 
           def download
-            super(&method(:handle_google_drawings))
+            super do |html|
+              fix_links handle_google_drawings(html)
+            end
           end
 
           private
@@ -24,6 +27,16 @@ module Lt
           attr_reader :options
           BASE_DPI = 72.0
           private_constant :BASE_DPI
+
+          def fix_links(html)
+            doc = Nokogiri::HTML(html)
+            doc.css('a').each do |link|
+              next if link['href'].blank?
+
+              link['href'] = CGI.unescape_html(link['href']).gsub GOOGLE_URL_RE, '\1'
+            end
+            doc.to_s
+          end
 
           def handle_google_drawings(html)
             return html unless (match = html.scan(GOOGLE_DRAWING_RE))
