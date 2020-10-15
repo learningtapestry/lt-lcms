@@ -4,10 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0](https://github.com/learningtapestry/lt-lcms/compare/v0.3.1...v0.4.0)
+
+### Added
+
+- Add support for Google Shared Drives ([#12](https://github.com/learningtapestry/lt-lcms/pull/12))
+
 ## [0.3.0](https://github.com/learningtapestry/lt-lcms/compare/v0.3.0...v0.3.1)
 
 ### Fixed
-- Fix the URLs inside links in the downloaded GDoc [#9](https://github.com/learningtapestry/lt-lcms/pull/9)
+- Fix the URLs inside links in the downloaded GDoc ([#9](https://github.com/learningtapestry/lt-lcms/pull/9))
 
 ## [0.3.0](https://github.com/learningtapestry/lt-lcms/compare/v0.2.0...v0.3.0)
 
