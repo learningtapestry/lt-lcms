@@ -19,7 +19,8 @@ module Lt
               file_metadata,
               fields: 'id',
               upload_source: StringIO.new(content),
-              content_type: content_type
+              content_type: content_type,
+              supports_all_drives: true
             )
             file.id
           end

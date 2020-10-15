@@ -48,7 +48,9 @@ module Lt
 
           def file
             @file ||= service.get_file(
-              file_id, fields: 'lastModifyingUser,modifiedTime,name,version'
+              file_id,
+              fields: 'lastModifyingUser,modifiedTime,name,version',
+              supports_all_drives: true
             )
           end
 
