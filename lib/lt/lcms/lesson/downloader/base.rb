@@ -12,8 +12,8 @@ module Lt
           MIME_TYPE_EXPORT = 'text/plain'
 
           def self.file_id_for(url)
-            url.scan(%r{/d/([^\/]+)/?}).first.try(:first) ||
-              url.scan(%r{/open\?id=([^\/]+)/?}).first.try(:first)
+            url.scan(%r{/d/([^/]+)/?}).first.try(:first) ||
+              url.scan(%r{/open\?id=([^/]+)/?}).first.try(:first)
           end
 
           attr_reader :content
