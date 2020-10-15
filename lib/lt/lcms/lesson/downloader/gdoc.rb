@@ -7,8 +7,8 @@ module Lt
     module Lesson
       module Downloader
         class Gdoc < Base
-          GOOGLE_DRAWING_RE = %r{https?://docs\.google\.com/?[^"]*/drawings/[^"]*}i
-          GOOGLE_URL_RE = %r{https://www\.google\.com/url\?q=([^&]*)&?.*}i
+          GOOGLE_DRAWING_RE = %r{https?://docs\.google\.com/?[^"]*/drawings/[^"]*}i.freeze
+          GOOGLE_URL_RE = %r{https://www\.google\.com/url\?q=([^&]*)&?.*}i.freeze
           MIME_TYPE = 'application/vnd.google-apps.document'
           MIME_TYPE_EXPORT = 'text/html'
 
@@ -25,6 +25,7 @@ module Lt
           private
 
           attr_reader :options
+
           BASE_DPI = 72.0
           private_constant :BASE_DPI
 
