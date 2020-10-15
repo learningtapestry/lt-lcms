@@ -4,7 +4,7 @@ PATH
     lt-lcms (0.3.1)
       google-api-client (~> 0.38)
       httparty (~> 0.18)
-      lt-google-api (~> 0.1)
+      lt-google-api (~> 0.2)
       nokogiri (~> 1.10, >= 1.10.8)
       rubyzip (~> 2)
 
@@ -41,7 +41,7 @@ GEM
     httpclient (2.8.3)
     iniparse (1.5.0)
     jwt (2.2.2)
-    lt-google-api (0.1.1)
+    lt-google-api (0.2.0)
       google-api-client
       googleauth
     memoist (0.16.2)

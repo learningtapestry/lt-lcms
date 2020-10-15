@@ -12,7 +12,7 @@ module Lt
           end
 
           def pdf_content
-            service.get_file(file_id, download_dest: StringIO.new).string
+            service.get_file(file_id, download_dest: StringIO.new, supports_all_drives: true).string
           end
         end
       end
