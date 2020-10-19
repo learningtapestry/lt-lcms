@@ -1,10 +1,10 @@
 PATH
   remote: .
   specs:
-    lt-lcms (0.3.1)
+    lt-lcms (0.4.0)
       google-api-client (~> 0.38)
       httparty (~> 0.18)
-      lt-google-api (~> 0.2)
+      lt-google-api (~> 0.2, >= 0.2.1)
       nokogiri (~> 1.10, >= 1.10.8)
       rubyzip (~> 2)
 
@@ -17,8 +17,9 @@ GEM
     childprocess (4.0.0)
     declarative (0.0.20)
     declarative-option (0.1.0)
-    faraday (1.0.1)
+    faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
+      ruby2_keywords
     google-api-client (0.46.1)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (~> 0.9)
@@ -41,7 +42,7 @@ GEM
     httpclient (2.8.3)
     iniparse (1.5.0)
     jwt (2.2.2)
-    lt-google-api (0.2.0)
+    lt-google-api (0.2.1)
       google-api-client
       googleauth
     memoist (0.16.2)
@@ -84,6 +85,7 @@ GEM
     rubocop-ast (0.8.0)
       parser (>= 2.7.1.5)
     ruby-progressbar (1.10.1)
+    ruby2_keywords (0.0.2)
     rubyzip (2.3.0)
     signet (0.14.0)
       addressable (~> 2.3)
