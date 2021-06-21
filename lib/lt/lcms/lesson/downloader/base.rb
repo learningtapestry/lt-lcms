@@ -26,10 +26,7 @@ module Lt
 
           def download(mime_type: self.class::MIME_TYPE_EXPORT)
             retry_attempt ||= 0
-            raw_content = service
-                            .export_file(file_id, mime_type)
-                            .encode('ASCII-8BIT')
-                            .force_encoding('UTF-8')
+            raw_content = service.export_file(file_id, mime_type)&.force_encoding('UTF-8')
             @content =
               if block_given?
                 yield raw_content
