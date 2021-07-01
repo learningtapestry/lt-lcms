@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/learningtapestry/lcms-engine/compare/v0.4.2...HEAD)
 
+### Added
+
+- Bump lt-google-api to 0.2.3 ([#17](https://github.com/learningtapestry/lt-lcms/pull/17))
+
 ## [0.4.2](https://github.com/learningtapestry/lt-lcms/compare/v0.4.1...v0.4.2) - 2021-06-21
 
 ### Fixed
