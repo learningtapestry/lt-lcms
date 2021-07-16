@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lt-lcms (0.4.3)
+    lt-lcms (0.4.4)
       google-api-client (~> 0.38)
       httparty (~> 0.18)
       lt-google-api (~> 0.2, >= 0.2.4)
@@ -84,13 +84,11 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0704)
     mini_mime (1.1.0)
-    mini_portile2 (2.5.3)
     minitest (5.14.4)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
     os (1.1.1)
     overcommit (0.58.0)

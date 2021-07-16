@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/learningtapestry/lcms-engine/compare/v0.4.3...HEAD)
+## [Unreleased](https://github.com/learningtapestry/lcms-engine/compare/v0.4.4...HEAD)
+
+## [0.4.4](https://github.com/learningtapestry/lt-lcms/compare/v0.4.3...v0.4.4) - 2021-07-16
+
+### Added
+
+- Bump lt-google-api to 0.2.4 ([#19](https://github.com/learningtapestry/lt-lcms/pull/19))
 
 ## [0.4.3](https://github.com/learningtapestry/lt-lcms/compare/v0.4.2...v0.4.3) - 2021-07-02
 
