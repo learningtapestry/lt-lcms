@@ -1,13 +1,9 @@
-/.bundle/
+/.bundle
 /.yardoc
-/_yardoc/
-/coverage/
-/doc/
-/pkg/
-/spec/reports/
-/tmp/
+/_yardoc
 
 # Ignore IDE specific files
-.idea/
+/.idea
 
+# Misc
 .DS_Store
