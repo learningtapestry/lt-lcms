@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- 
+- Drop Ruby < 3.2 ([#29](https://github.com/learningtapestry/lt-lcms/pull/29))
 
 ## [0.4.4](https://github.com/learningtapestry/lt-lcms/compare/v0.4.3...v0.4.4) - 2021-07-16
 
