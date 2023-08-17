@@ -15,6 +15,9 @@ AllCops:
   NewCops: enable
   TargetRubyVersion: 3.2
 
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
+
 Layout/LineLength:
   Max: 120
 
@@ -31,7 +34,7 @@ Metrics/BlockLength:
   Exclude:
   - '**/*_spec.rb'
   - 'config/routes.rb'
-  ExcludedMethods: ['guard', 'included']
+  AllowedMethods: ['guard', 'included']
 
 Metrics/ClassLength:
   Max: 250

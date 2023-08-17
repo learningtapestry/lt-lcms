@@ -11,15 +11,15 @@ module Lt
 
           def upload(name, content, content_type, parent_folder_id = nil)
             file_metadata = {
-              name: name,
+              name:,
               mime_type: Lt::Google::Api::Drive::MIME_FILE
             }
-            file_metadata[:parents] = [parent_folder_id] if parent_folder_id.present?
+            file_metadata[:parents] = Array.wrap(parent_folder_id) unless parent_folder_id.nil?
             file = service.create_file(
               file_metadata,
               fields: 'id',
               upload_source: StringIO.new(content),
-              content_type: content_type,
+              content_type:,
               supports_all_drives: true
             )
             file.id

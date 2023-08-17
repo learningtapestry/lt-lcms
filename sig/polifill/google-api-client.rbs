@@ -1,0 +1,5 @@
+module Google
+  module Apis
+    RateLimitError: untyped
+  end
+end

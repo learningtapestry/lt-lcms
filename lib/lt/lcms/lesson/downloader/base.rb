@@ -36,6 +36,8 @@ module Lt
             self
           rescue ::Google::Apis::RateLimitError
             raise unless options[:import_retry]
+
+            retry_attempt = retry_attempt.to_i
             raise if retry_attempt >= MAX_RETRY_COUNT
 
             sleep RETRY_DELAYES[retry_attempt] * rand(1.0..5.0)

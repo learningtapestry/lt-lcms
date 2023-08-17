@@ -7,8 +7,8 @@ module Lt
     module Lesson
       module Downloader
         class Gdoc < Base
-          GOOGLE_DRAWING_RE = %r{https?://docs\.google\.com/?[^"]*/drawings/[^"]*}i.freeze
-          GOOGLE_URL_RE = %r{https://www\.google\.com/url\?q=([^&]*)&?.*}i.freeze
+          GOOGLE_DRAWING_RE = %r{https?://docs\.google\.com/?[^"]*/drawings/[^"]*}i
+          GOOGLE_URL_RE = %r{https://www\.google\.com/url\?q=([^&]*)&?.*}i
           MIME_TYPE = 'application/vnd.google-apps.document'
           MIME_TYPE_EXPORT = 'text/html'
 
@@ -43,15 +43,15 @@ module Lt
             return html unless (match = html.scan(GOOGLE_DRAWING_RE))
 
             bearer = @credentials.fetch_access_token!['access_token']
-            headers = { 'Authorization' => "Bearer #{bearer}" }
 
             match.to_a.uniq.each do |url|
               upd_url = updated_drawing_url_for(url)
-              response = HTTParty.get CGI.unescapeHTML(upd_url), headers: headers
+              response = HTTParty.get CGI.unescapeHTML(upd_url), headers: { 'Authorization' => "Bearer #{bearer}" }
 
               next unless response.code == 200
 
-              new_src = "data:#{response.content_type};base64, #{Base64.encode64(response)}\" drawing_url=\"#{upd_url}"
+              new_src =
+                "data:#{response.content_type};base64, #{Base64.encode64(response.to_s)}\" drawing_url=\"#{upd_url}"
               html = html.gsub(url, new_src)
             end
 
@@ -64,7 +64,7 @@ module Lt
 
             dpi_ratio = options[:dpi].to_f / BASE_DPI
             uri = URI.parse(url)
-            query = CGI.parse(uri.query).transform_values(&:first)
+            query = CGI.parse(uri.query.to_s).transform_values(&:first)
             query['w'] = (query['w'].to_i * dpi_ratio).round.to_s
             query['h'] = (query['h'].to_i * dpi_ratio).round.to_s
             URI::HTTPS.build(host: uri.host, path: uri.path, query: query.to_query).to_s

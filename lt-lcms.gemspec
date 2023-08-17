@@ -21,9 +21,10 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
     spec.metadata['allowed_push_host'] = 'https://rubygems.org'
+    spec.metadata['rubygems_mfa_required'] = 'true'
   else
     raise 'RubyGems 2.0 or newer is required to protect against ' \
-      'public gem pushes.'
+          'public gem pushes.'
   end
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
@@ -39,8 +40,9 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.add_dependency 'nokogiri', '~> 1.10', '>= 1.10.8'
   spec.add_dependency 'rubyzip', '~> 2'
 
-  spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'overcommit', '~> 0.57'
+  spec.add_development_dependency 'bundler', '~> 2.4'
+  spec.add_development_dependency 'overcommit', '~> 0.60'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rubocop', '~> 1.54'
+  spec.add_development_dependency 'steep', '~> 1.5.3'
 end
