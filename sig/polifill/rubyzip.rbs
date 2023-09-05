@@ -1,6 +1,0 @@
-module Zip
-  class File
-    # def find: () { (Elem) -> boolish } -> Elem?
-    def self.open: (*untyped) { (untyped) -> untyped } -> untyped
-  end
-end

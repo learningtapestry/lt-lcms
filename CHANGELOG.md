@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/learningtapestry/lcms-engine/compare/v0.5.0...HEAD)
 
+### Added
+
+- Added Docker support [@paranoicsan](https://github.com/paranoicsan)
+- Added RBS support [@paranoicsan](https://github.com/paranoicsan)
+
+### Changed
+
+- Updated dependencies [@paranoicsan](https://github.com/paranoicsan)
+
 ## [0.5.0](https://github.com/learningtapestry/lt-lcms/compare/v0.4.4...v0.5.0) - 2023-07-07
 
 ### Added

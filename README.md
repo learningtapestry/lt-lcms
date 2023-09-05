@@ -40,6 +40,26 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 docker buildx build --platform linux/arm64/v8,linux/amd64 -t learningtapestry/lt-lcms --push .
 ```
 
+### Type checking
+
+Install existing collections:
+
+```shell
+rbs collection install
+```
+
+Validate installation
+
+```shell
+rbs validate
+```
+
+Check types
+
+```shell
+steep check
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/learningtapestry/lt-lcms.

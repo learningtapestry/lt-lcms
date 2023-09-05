@@ -1,7 +1,7 @@
 # D = Steep::Diagnostic
 #
  target :lib do
-   signature "sig"
+   signature "sig", "vendor/rbs"
 
    check "lib"                       # Directory name
 #   # check "Gemfile"                   # File name
@@ -10,10 +10,7 @@
 #
 #   # library "pathname"              # Standard libraries
 #   # library "strong_json"           # Gems
-   library "cgi"
-   library "rbs"
-   library "steep"
-   library "tempfile"
+   library "cgi", "rbs", "tempfile"
 #
 #   # configure_code_diagnostics(D::Ruby.default)      # `default` diagnostics setting (applies by default)
 #   # configure_code_diagnostics(D::Ruby.strict)       # `strict` diagnostics setting
