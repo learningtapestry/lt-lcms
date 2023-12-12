@@ -15,7 +15,7 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.description = ''
   spec.license     = 'Apache-2.0'
 
-  spec.required_ruby_version = '>= 3.2'
+  spec.required_ruby_version = '>= 2.7'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -34,10 +34,9 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'google-api-client', '~> 0.38'
+  spec.add_dependency 'google-apis-core', '~> 0.11', '>= 0.11.1'
   spec.add_dependency 'httparty', '~> 0.18'
-  # NOTE: Temporary moved to Gemfile
-  # spec.add_dependency 'lt-google-api', '~> 0.2', '>= 0.2.4'
+  spec.add_dependency 'lt-google-api', '~> 0.3'
   spec.add_dependency 'nokogiri', '~> 1.10', '>= 1.10.8'
   spec.add_dependency 'rubyzip', '~> 2'
 

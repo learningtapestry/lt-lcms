@@ -6,7 +6,3 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 # Specify your gem's dependencies in lt-lcms.gemspec
 gemspec
-
-gem 'lt-google-api', github: 'learningtapestry/lt-google-api',
-                     branch: 'master',
-                     ref: '74c9baa'
