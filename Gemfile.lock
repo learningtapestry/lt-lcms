@@ -1,10 +1,19 @@
+GIT
+  remote: https://github.com/learningtapestry/lt-google-api
+  revision: 3dd76b67695ce6ddf91c80512eb3cb096b810b4b
+  ref: 3dd76b6
+  branch: ruby-3-upgrade
+  specs:
+    lt-google-api (0.3.0)
+      google-apis-drive_v3 (~> 0.46)
+      googleauth (~> 1.9)
+
 PATH
   remote: .
   specs:
     lt-lcms (0.6.0)
       google-apis-core (~> 0.11, >= 0.11.1)
       httparty (~> 0.18)
-      lt-google-api (~> 0.3)
       nokogiri (~> 1.10, >= 1.10.8)
       rubyzip (~> 2)
 
@@ -65,9 +74,6 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.5.3)
-    lt-google-api (0.3.0)
-      google-apis-drive_v3 (~> 0.46)
-      googleauth (~> 1.9)
     mini_mime (1.1.5)
     minitest (5.19.0)
     multi_json (1.15.0)
@@ -154,6 +160,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.4)
+  lt-google-api!
   lt-lcms!
   overcommit (~> 0.60)
   rake (~> 13.0)
