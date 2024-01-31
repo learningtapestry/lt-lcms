@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'lt/lcms/lesson/downloader/base'
+require 'httparty'
 
 module Lt
   module Lcms
@@ -46,7 +47,7 @@ module Lt
 
             match.to_a.uniq.each do |url|
               upd_url = updated_drawing_url_for(url)
-              response = HTTParty.get CGI.unescapeHTML(upd_url), headers: { 'Authorization' => "Bearer #{bearer}" }
+              response = ::HTTParty.get CGI.unescapeHTML(upd_url), headers: { 'Authorization' => "Bearer #{bearer}" }
 
               next unless response.code == 200
 
