@@ -9,4 +9,4 @@ gemspec
 
 gem 'lt-google-api', github: 'learningtapestry/lt-google-api',
                      branch: 'ruby-3-upgrade',
-                     ref: '8c138bb'
+                     ref: '08cece7'
