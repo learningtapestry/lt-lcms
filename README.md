@@ -37,7 +37,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ### Docker
 
 ```shell
-docker buildx build --platform linux/arm64/v8,linux/amd64 -t learningtapestry/lt-lcms --push .
+docker buildx build --platform linux/arm64/v8,linux/amd64 -t learningtapestry/lt-lcms:legacy --push .
 ```
 
 ### Type checking
