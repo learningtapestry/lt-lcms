@@ -145,6 +145,10 @@ gems:
     revision: 218cf130d31f63e110e350efc3fa265311b0f238
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
+- name: prism
+  version: 1.4.0
+  source:
+    type: rubygems
 - name: rainbow
   version: '3.0'
   source:
@@ -201,6 +205,10 @@ gems:
     revision: 218cf130d31f63e110e350efc3fa265311b0f238
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
+- name: stringio
+  version: '0'
+  source:
+    type: stdlib
 - name: timeout
   version: '0'
   source:

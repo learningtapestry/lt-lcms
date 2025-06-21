@@ -1,9 +1,5 @@
 # Lt::Lcms
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/07fa3d2919744d3bf328/maintainability)](https://codeclimate.com/github/learningtapestry/lt-lcms/maintainability)
-[![Codeship Status for learningtapestry/lt-lcms](https://app.codeship.com/projects/b151f4e0-26f8-0137-ffc2-3e508df156a9/status?branch=master)](https://app.codeship.com/projects/330485)
-
-
 ## Installation
 
 Add this line to your application's Gemfile:

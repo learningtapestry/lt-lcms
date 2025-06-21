@@ -36,8 +36,7 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
 
   spec.add_dependency 'google-apis-core', '~> 0.18'
   spec.add_dependency 'httparty', '~> 0.22'
-  # temporary moved to Gemfile
-  # spec.add_dependency 'lt-google-api', '~> 0.3'
+  spec.add_dependency 'lt-google-api', '~> 0.4.0'
   spec.add_dependency 'nokogiri', '~> 1.10', '>= 1.10.8'
   spec.add_dependency 'rubyzip', '~> 2'
 
