@@ -1,5 +1,0 @@
-module Rails
-  def self.application: -> untyped
-  def self.logger: -> untyped
-  def self.root: -> untyped
-end

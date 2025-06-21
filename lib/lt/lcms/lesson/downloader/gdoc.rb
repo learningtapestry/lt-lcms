@@ -1,14 +1,15 @@
 # frozen_string_literal: true
 
 require 'lt/lcms/lesson/downloader/base'
+require 'httparty'
 
 module Lt
   module Lcms
     module Lesson
       module Downloader
         class Gdoc < Base
-          GOOGLE_DRAWING_RE = %r{https?://docs\.google\.com/?[^"]*/drawings/[^"]*}i.freeze
-          GOOGLE_URL_RE = %r{https://www\.google\.com/url\?q=([^&]*)&?.*}i.freeze
+          GOOGLE_DRAWING_RE = %r{https?://docs\.google\.com/?[^"]*/drawings/[^"]*}i
+          GOOGLE_URL_RE = %r{https://www\.google\.com/url\?q=([^&]*)&?.*}i
           MIME_TYPE = 'application/vnd.google-apps.document'
           MIME_TYPE_EXPORT = 'text/html'
 
@@ -46,7 +47,7 @@ module Lt
 
             match.to_a.uniq.each do |url|
               upd_url = updated_drawing_url_for(url)
-              response = HTTParty.get CGI.unescapeHTML(upd_url), headers: { 'Authorization' => "Bearer #{bearer}" }
+              response = ::HTTParty.get CGI.unescapeHTML(upd_url), headers: { 'Authorization' => "Bearer #{bearer}" }
 
               next unless response.code == 200
 
