@@ -12,11 +12,11 @@ module Lt
           def upload(name, content, content_type, parent_folder_id = nil)
             file_metadata = {
               name:,
-              mime_type: Lt::Google::Api::Drive::MIME_FILE
+              mime_type: Lt::Google::Api::Drive::MIME_FILE,
+              parents: parent_folder_id.present? ? Array.wrap(parent_folder_id) : nil
             }
-            file_metadata[:parents] = Array.wrap(parent_folder_id) unless parent_folder_id.nil?
             file = service.create_file(
-              file_metadata,
+              file_metadata.compact,
               fields: 'id',
               upload_source: StringIO.new(content),
               content_type:,

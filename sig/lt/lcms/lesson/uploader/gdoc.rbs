@@ -4,12 +4,11 @@ module Lt
       module Uploader
         class Gdoc
           def initialize: (untyped credentials) -> void
-
-          def upload: (untyped name, untyped content, untyped content_type, ?untyped? parent_folder_id) -> untyped
+          def upload: (String name, untyped content, String content_type, ?(String | nil)? parent_folder_id) -> String
 
           private
 
-          def service: () -> untyped
+          def service: -> untyped
         end
       end
     end
