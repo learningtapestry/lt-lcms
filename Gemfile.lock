@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lt-lcms (0.7.0)
+    lt-lcms (0.7.1)
       activesupport (~> 7)
       google-apis-core (~> 0.18)
       httparty (~> 0.22)
