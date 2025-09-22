@@ -6,11 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/learningtapestry/lcms-engine/compare/v0.7.0...HEAD)
 
-## [0.6.1](https://github.com/learningtapestry/lt-lcms/compare/v0.6.1...v0.7.0) - 2025-06-21
+## [0.7.1](https://github.com/learningtapestry/lt-lcms/compare/v0.7.0...v0.7.1) - 2025-06-21
+
+### Changed
+
+- Bump lt-google-api to 0.4.1
+- Misc gem updates
+
+## [0.7.0](https://github.com/learningtapestry/lt-lcms/compare/v0.6.1...v0.7.0) - 2025-06-21
 
 ### Removed
 
-- Drop Ruby < 3.2 support
+- Drop Ruby < 3.2 support and bump ruby to 3.2 by @paranoicsan in #34
 
 ### Added
 
