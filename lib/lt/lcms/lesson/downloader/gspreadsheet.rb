@@ -20,8 +20,9 @@ module Lt
             tempfile.binmode
             download(mime_type: 'application/zip') do |raw_zip|
               tempfile.write raw_zip
+              tempfile.flush
               # NOTE: It's impossible to use ::Zip::InputStream due to `General Purpose Flag Bit 3`
-              ::Zip::File.open(tempfile.path) do |zip|
+              ::Zip::File.open(tempfile.path.to_s) do |zip|
                 if (entry = zip.find_entry "#{sheet_name}.html")
                   result.write entry.get_input_stream.read
                 end
