@@ -38,9 +38,9 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.add_dependency 'httparty', '~> 0.22'
   spec.add_dependency 'lt-google-api', '~> 0.4.0', '>= 0.4.1'
   spec.add_dependency 'nokogiri', '~> 1.10', '>= 1.10.8'
-  spec.add_dependency 'rubyzip', '~> 2'
+  spec.add_dependency 'rubyzip', '>= 2', '< 4'
 
-  # NOTE: Limited to 7.x due to all clients are using 7.x
+  # NOTE: Supports activesupport 7.x and 8.x
   spec.add_dependency 'activesupport', '>= 7', '< 9'
 
   spec.add_development_dependency 'bundler', '~> 2.4'

@@ -35,7 +35,7 @@ module Lt
             doc.css('a').each do |link|
               next if link['href'].blank?
 
-              link['href'] = CGI.unescape_html(link['href']).gsub GOOGLE_URL_RE, '\1'
+              link['href'] = CGI.unescape_html(link['href'].to_s).gsub GOOGLE_URL_RE, '\1'
             end
             doc.to_s
           end

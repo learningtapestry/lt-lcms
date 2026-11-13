@@ -7,7 +7,7 @@ PATH
       httparty (~> 0.22)
       lt-google-api (~> 0.4.0, >= 0.4.1)
       nokogiri (~> 1.10, >= 1.10.8)
-      rubyzip (~> 2)
+      rubyzip (>= 2, < 4)
 
 GEM
   remote: https://rubygems.org/
@@ -148,7 +148,7 @@ GEM
       parser (>= 3.3.7.2)
       prism (>= 1.7)
     ruby-progressbar (1.13.0)
-    rubyzip (2.4.1)
+    rubyzip (3.7.0)
     securerandom (0.4.1)
     signet (0.22.2)
       addressable (~> 2.8)
